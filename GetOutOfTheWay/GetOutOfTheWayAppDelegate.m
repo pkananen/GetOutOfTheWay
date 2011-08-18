@@ -14,13 +14,16 @@
 
 @synthesize window=_window;
 
-@synthesize viewController=_viewController;
+@synthesize tabBarController= tabBarController;
+
+@synthesize backgroundImageView;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.viewController;
+    backgroundImageView = [[UIView alloc] initWithFrame: CGRectMake(0, 20, 320, 460)];
+    [self.window addSubview:backgroundImageView]; 
+    self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -67,7 +70,8 @@
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [tabBarController release];
+    [backgroundImageView release];
     [super dealloc];
 }
 

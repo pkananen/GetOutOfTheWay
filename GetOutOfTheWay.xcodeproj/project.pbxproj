@@ -14,8 +14,18 @@
 		BB73359613FC6FD0004D46E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB73359513FC6FD0004D46E5 /* main.m */; };
 		BB73359913FC6FD0004D46E5 /* GetOutOfTheWayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB73359813FC6FD0004D46E5 /* GetOutOfTheWayAppDelegate.m */; };
 		BB73359C13FC6FD0004D46E5 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB73359A13FC6FD0004D46E5 /* MainWindow.xib */; };
-		BB73359F13FC6FD0004D46E5 /* GetOutOfTheWayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB73359E13FC6FD0004D46E5 /* GetOutOfTheWayViewController.m */; };
-		BB7335A213FC6FD0004D46E5 /* GetOutOfTheWayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB7335A013FC6FD0004D46E5 /* GetOutOfTheWayViewController.xib */; };
+		BB7335AB13FC79E8004D46E5 /* GetOutOfTheWayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB7335A813FC79E8004D46E5 /* GetOutOfTheWayView.xib */; };
+		BB7335AC13FC79E8004D46E5 /* GetOutOfTheWayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7335AA13FC79E8004D46E5 /* GetOutOfTheWayViewController.m */; };
+		BB7335AE13FC7D22004D46E5 /* search_header.png in Resources */ = {isa = PBXBuildFile; fileRef = BB7335AD13FC7D22004D46E5 /* search_header.png */; };
+		BB7335B613FC7F8F004D46E5 /* AutocompleteDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7335B113FC7F8E004D46E5 /* AutocompleteDelegate.m */; };
+		BB7335B713FC7F8F004D46E5 /* EditableValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7335B313FC7F8E004D46E5 /* EditableValueCell.m */; };
+		BB7335BB13FCAC24004D46E5 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7335BA13FCAC24004D46E5 /* OrderedDictionary.m */; };
+		BB7335BD13FCAD61004D46E5 /* UIViewController+LookAndFeel.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7335BC13FCAD60004D46E5 /* UIViewController+LookAndFeel.m */; };
+		BB7335BF13FCB0DF004D46E5 /* EditableValueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB7335BE13FCB0DF004D46E5 /* EditableValueCell.xib */; };
+		BB7335C213FCB1AC004D46E5 /* grad_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BB7335C013FCB1AC004D46E5 /* grad_background.png */; };
+		BB7335C313FCB1AC004D46E5 /* grad_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB7335C113FCB1AC004D46E5 /* grad_background@2x.png */; };
+		BB7335C713FCB2FB004D46E5 /* SuckageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7335C513FCB2FA004D46E5 /* SuckageViewController.m */; };
+		BB7335C813FCB2FB004D46E5 /* SuckageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB7335C613FCB2FA004D46E5 /* SuckageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +40,24 @@
 		BB73359713FC6FD0004D46E5 /* GetOutOfTheWayAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetOutOfTheWayAppDelegate.h; sourceTree = "<group>"; };
 		BB73359813FC6FD0004D46E5 /* GetOutOfTheWayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetOutOfTheWayAppDelegate.m; sourceTree = "<group>"; };
 		BB73359B13FC6FD0004D46E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		BB73359D13FC6FD0004D46E5 /* GetOutOfTheWayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetOutOfTheWayViewController.h; sourceTree = "<group>"; };
-		BB73359E13FC6FD0004D46E5 /* GetOutOfTheWayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetOutOfTheWayViewController.m; sourceTree = "<group>"; };
-		BB7335A113FC6FD0004D46E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GetOutOfTheWayViewController.xib; sourceTree = "<group>"; };
+		BB7335A813FC79E8004D46E5 /* GetOutOfTheWayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetOutOfTheWayView.xib; sourceTree = "<group>"; };
+		BB7335A913FC79E8004D46E5 /* GetOutOfTheWayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetOutOfTheWayViewController.h; sourceTree = "<group>"; };
+		BB7335AA13FC79E8004D46E5 /* GetOutOfTheWayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetOutOfTheWayViewController.m; sourceTree = "<group>"; };
+		BB7335AD13FC7D22004D46E5 /* search_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_header.png; sourceTree = "<group>"; };
+		BB7335AF13FC7D90004D46E5 /* UIViewController+LookAndFeel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LookAndFeel.h"; sourceTree = "<group>"; };
+		BB7335B013FC7F8E004D46E5 /* AutocompleteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutocompleteDelegate.h; sourceTree = "<group>"; };
+		BB7335B113FC7F8E004D46E5 /* AutocompleteDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutocompleteDelegate.m; sourceTree = "<group>"; };
+		BB7335B213FC7F8E004D46E5 /* EditableValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableValueCell.h; sourceTree = "<group>"; };
+		BB7335B313FC7F8E004D46E5 /* EditableValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableValueCell.m; sourceTree = "<group>"; };
+		BB7335B913FCAC24004D46E5 /* OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedDictionary.h; sourceTree = "<group>"; };
+		BB7335BA13FCAC24004D46E5 /* OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionary.m; sourceTree = "<group>"; };
+		BB7335BC13FCAD60004D46E5 /* UIViewController+LookAndFeel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LookAndFeel.m"; sourceTree = "<group>"; };
+		BB7335BE13FCB0DF004D46E5 /* EditableValueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditableValueCell.xib; sourceTree = "<group>"; };
+		BB7335C013FCB1AC004D46E5 /* grad_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grad_background.png; sourceTree = "<group>"; };
+		BB7335C113FCB1AC004D46E5 /* grad_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grad_background@2x.png"; sourceTree = "<group>"; };
+		BB7335C413FCB2FA004D46E5 /* SuckageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuckageViewController.h; sourceTree = "<group>"; };
+		BB7335C513FCB2FA004D46E5 /* SuckageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuckageViewController.m; sourceTree = "<group>"; };
+		BB7335C613FCB2FA004D46E5 /* SuckageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuckageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +104,10 @@
 		BB73358E13FC6FD0004D46E5 /* GetOutOfTheWay */ = {
 			isa = PBXGroup;
 			children = (
-				BB73359713FC6FD0004D46E5 /* GetOutOfTheWayAppDelegate.h */,
-				BB73359813FC6FD0004D46E5 /* GetOutOfTheWayAppDelegate.m */,
-				BB73359A13FC6FD0004D46E5 /* MainWindow.xib */,
-				BB73359D13FC6FD0004D46E5 /* GetOutOfTheWayViewController.h */,
-				BB73359E13FC6FD0004D46E5 /* GetOutOfTheWayViewController.m */,
-				BB7335A013FC6FD0004D46E5 /* GetOutOfTheWayViewController.xib */,
+				BB7335CC13FCC077004D46E5 /* View Controllers */,
+				BB7335CB13FCC04D004D46E5 /* External */,
+				BB7335CA13FCBFF1004D46E5 /* Nibs */,
+				BB7335C913FCBFC3004D46E5 /* Images */,
 				BB73358F13FC6FD0004D46E5 /* Supporting Files */,
 			);
 			path = GetOutOfTheWay;
@@ -93,12 +116,61 @@
 		BB73358F13FC6FD0004D46E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BB7335BC13FCAD60004D46E5 /* UIViewController+LookAndFeel.m */,
+				BB73359713FC6FD0004D46E5 /* GetOutOfTheWayAppDelegate.h */,
+				BB73359813FC6FD0004D46E5 /* GetOutOfTheWayAppDelegate.m */,
 				BB73359013FC6FD0004D46E5 /* GetOutOfTheWay-Info.plist */,
 				BB73359113FC6FD0004D46E5 /* InfoPlist.strings */,
 				BB73359413FC6FD0004D46E5 /* GetOutOfTheWay-Prefix.pch */,
 				BB73359513FC6FD0004D46E5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB7335C913FCBFC3004D46E5 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BB7335C013FCB1AC004D46E5 /* grad_background.png */,
+				BB7335C113FCB1AC004D46E5 /* grad_background@2x.png */,
+				BB7335AD13FC7D22004D46E5 /* search_header.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		BB7335CA13FCBFF1004D46E5 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				BB7335C613FCB2FA004D46E5 /* SuckageViewController.xib */,
+				BB7335BE13FCB0DF004D46E5 /* EditableValueCell.xib */,
+				BB7335A813FC79E8004D46E5 /* GetOutOfTheWayView.xib */,
+				BB73359A13FC6FD0004D46E5 /* MainWindow.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		BB7335CB13FCC04D004D46E5 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				BB7335B913FCAC24004D46E5 /* OrderedDictionary.h */,
+				BB7335BA13FCAC24004D46E5 /* OrderedDictionary.m */,
+				BB7335B213FC7F8E004D46E5 /* EditableValueCell.h */,
+				BB7335B313FC7F8E004D46E5 /* EditableValueCell.m */,
+				BB7335AF13FC7D90004D46E5 /* UIViewController+LookAndFeel.h */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		BB7335CC13FCC077004D46E5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB7335B013FC7F8E004D46E5 /* AutocompleteDelegate.h */,
+				BB7335B113FC7F8E004D46E5 /* AutocompleteDelegate.m */,
+				BB7335A913FC79E8004D46E5 /* GetOutOfTheWayViewController.h */,
+				BB7335AA13FC79E8004D46E5 /* GetOutOfTheWayViewController.m */,
+				BB7335C413FCB2FA004D46E5 /* SuckageViewController.h */,
+				BB7335C513FCB2FA004D46E5 /* SuckageViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +222,12 @@
 			files = (
 				BB73359313FC6FD0004D46E5 /* InfoPlist.strings in Resources */,
 				BB73359C13FC6FD0004D46E5 /* MainWindow.xib in Resources */,
-				BB7335A213FC6FD0004D46E5 /* GetOutOfTheWayViewController.xib in Resources */,
+				BB7335AB13FC79E8004D46E5 /* GetOutOfTheWayView.xib in Resources */,
+				BB7335AE13FC7D22004D46E5 /* search_header.png in Resources */,
+				BB7335BF13FCB0DF004D46E5 /* EditableValueCell.xib in Resources */,
+				BB7335C213FCB1AC004D46E5 /* grad_background.png in Resources */,
+				BB7335C313FCB1AC004D46E5 /* grad_background@2x.png in Resources */,
+				BB7335C813FCB2FB004D46E5 /* SuckageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +240,12 @@
 			files = (
 				BB73359613FC6FD0004D46E5 /* main.m in Sources */,
 				BB73359913FC6FD0004D46E5 /* GetOutOfTheWayAppDelegate.m in Sources */,
-				BB73359F13FC6FD0004D46E5 /* GetOutOfTheWayViewController.m in Sources */,
+				BB7335AC13FC79E8004D46E5 /* GetOutOfTheWayViewController.m in Sources */,
+				BB7335B613FC7F8F004D46E5 /* AutocompleteDelegate.m in Sources */,
+				BB7335B713FC7F8F004D46E5 /* EditableValueCell.m in Sources */,
+				BB7335BB13FCAC24004D46E5 /* OrderedDictionary.m in Sources */,
+				BB7335BD13FCAD61004D46E5 /* UIViewController+LookAndFeel.m in Sources */,
+				BB7335C713FCB2FB004D46E5 /* SuckageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,14 +266,6 @@
 				BB73359B13FC6FD0004D46E5 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		BB7335A013FC6FD0004D46E5 /* GetOutOfTheWayViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BB7335A113FC6FD0004D46E5 /* en */,
-			);
-			name = GetOutOfTheWayViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -10,11 +10,15 @@
 @class GetOutOfTheWayViewController;
 
 @interface GetOutOfTheWayAppDelegate : NSObject <UIApplicationDelegate> {
-
+    
+    UITabBarController *tabBarController;
+    UIView* backgroundImageView;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet GetOutOfTheWayViewController *viewController;
+@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+
+@property (nonatomic, retain) UIView* backgroundImageView;
 
 @end
