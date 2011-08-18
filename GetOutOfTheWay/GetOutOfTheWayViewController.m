@@ -63,7 +63,10 @@
     self.autocompleteView.delegate = self.autocompleteDelegate;
     self.autocompleteView.dataSource = self.autocompleteDelegate;
     self.autocompleteDelegate.selectionDelegate = self;
+    
+    // start in upper left, full width, no height
     self.autocompleteView.frame = CGRectMake(0, 0, 320, 0);
+    // start at bottom, full width, no height
     self.autocompleteFrame.frame = CGRectMake(0, 480, 320, 0);
     
     self.language = @"0";
@@ -115,11 +118,16 @@
 -(void)showAutocompleteResults {
     self.tableView.scrollEnabled = NO;
     self.autocompleteUp = YES;
+    // autocomplete view is up now
     [UIView animateWithDuration:0.6
                      animations:^{
+                         // set the frame of the tableView to be smaller so it scrolls up
                          self.tableView.frame = CGRectMake(0, 0, 320, 210);
+                         // set the right amount of height (198 - 64 = 134) for the autocomplete frame
                          self.autocompleteFrame.frame = CGRectMake(0, 64, 320, 198);
+                         // set the right amount of height for the autocomplete view
                          self.autocompleteView.frame = CGRectMake(0, 10, 320, 188);
+                         // add the autocomplete frame to the main view
                          [self.view addSubview:self.autocompleteFrame];
                      }
                      completion:^(BOOL finished){
@@ -131,14 +139,71 @@
 -(void)hideAutocompleteResultsView {
     [UIView animateWithDuration:0.6
                      animations:^{
+                         // collapse autocomplete again
                          self.autocompleteFrame.frame = CGRectMake(0, 480, 320, 0);
+                         // set tableView back to full height
                          self.tableView.frame = CGRectMake(0, 0, 320, 324);
+                         // remove the autocomplete
                          [self.autocompleteFrame removeFromSuperview];
                      }
                      completion:^(BOOL finished){
                          self.autocompleteUp = NO;
                      }
      ];
+}
+
+-(IBAction)hidePickerView {
+    
+    [UIView beginAnimations:@"pickerHide" context:nil];
+    [UIView setAnimationDuration:0.8];
+    // set tableView frame to be full height
+    self.tableView.frame = CGRectMake(0, 0, 320, 324);
+    [UIView setAnimationTransition:UIViewAnimationOptionTransitionCurlDown
+                           forView:self.pickerView
+                             cache:YES];
+
+    // animate the frame down
+    self.pickerView.frame = CGRectMake(0, 460, 320, 260);
+    self.pickerUp = NO;
+    [UIView commitAnimations];
+    [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]].selected = NO;
+}
+
+- (void)tableView:(UITableView *)tableViewz didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        [self showAutocompleteResults];        
+        [tableViewz cellForRowAtIndexPath:indexPath].selected = NO;
+    }
+    else if (indexPath.section == 1) {
+        [self.searchPhraseField resignFirstResponder];
+        [tableViewz cellForRowAtIndexPath:indexPath].selected = YES;
+        if (!CGRectEqualToRect(self.pickerView.frame, CGRectMake(0, 176, 320, 260))) {
+            
+            self.pickerUp = YES;
+            [UIView beginAnimations:@"picker" context:nil];
+            [UIView setAnimationDuration:0.8];
+            // condense the tableView frame (note dimension differences)
+            self.tableView.frame = CGRectMake(0, 0, 320, 230);
+            
+            // set a place for the picker to come from
+            self.pickerView.frame = CGRectMake(0, 460, 320, 260);
+            // scroll to the right row
+            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+            // set a place for the picker to go
+            self.pickerView.frame = CGRectMake(0, 176, 320, 260);
+            [UIView setAnimationTransition:UIViewAnimationOptionTransitionCurlUp
+                                   forView:self.pickerView
+                                     cache:YES];
+            // add the pickerView
+            [self.view addSubview:self.pickerView];
+            
+            [UIView commitAnimations];
+        }
+        
+    }
+    else if (indexPath.section == 2) {
+        [tableViewz cellForRowAtIndexPath:indexPath].selected = NO;
+    }
 }
 
 #pragma mark - UITextFieldDelegate methods
@@ -276,55 +341,13 @@
     return indexPath;
 }
 
-- (void)tableView:(UITableView *)tableViewz didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        [self showAutocompleteResults];        
-        [tableViewz cellForRowAtIndexPath:indexPath].selected = NO;
-    }
-    else if (indexPath.section == 1) {
-        [self.searchPhraseField resignFirstResponder];
-        [tableViewz cellForRowAtIndexPath:indexPath].selected = YES;
-        if (!CGRectEqualToRect(self.pickerView.frame, CGRectMake(0, 176, 320, 260))) {
-        
-            self.pickerUp = YES;
-            [UIView beginAnimations:@"picker" context:nil];
-            [UIView setAnimationDuration:0.8];
-            self.tableView.frame = CGRectMake(0, 0, 320, 230);
-            
-            self.pickerView.frame = CGRectMake(0, 460, 320, 260);
-            [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-            self.pickerView.frame = CGRectMake(0, 176, 320, 260);
-            [UIView setAnimationTransition:UIViewAnimationOptionTransitionCurlUp
-                                   forView:self.pickerView
-                                     cache:YES];
-            [self.view addSubview:self.pickerView];
-            
-            [UIView commitAnimations];
-        }
-        
-    }
-    else if (indexPath.section == 2) {
-        [tableViewz cellForRowAtIndexPath:indexPath].selected = NO;
-    }
-}
+
 
 -(CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 50.0f;
 }
 
--(IBAction)hidePickerView {
-    
-    [UIView beginAnimations:@"pickerHide" context:nil];
-    [UIView setAnimationDuration:0.8];
-    self.tableView.frame = CGRectMake(0, 0, 320, 324);
-    [UIView setAnimationTransition:UIViewAnimationOptionTransitionCurlDown
-                           forView:self.pickerView
-                             cache:YES];
-    self.pickerView.frame = CGRectMake(0, 460, 320, 260);
-    self.pickerUp = NO;
-    [UIView commitAnimations];
-    [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]].selected = NO;
-}
+
 
 #pragma mark -
 # pragma UIPickerViewDelegate methods
